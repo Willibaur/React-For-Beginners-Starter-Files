@@ -8,7 +8,7 @@ class StorePicker extends React.Component {
     // 1. Stop the form from submitting
     event.preventDefault();
 
-    // 2. get the text from the input
+    // 2. get the text from that input
     const storeName = this.myInput.current.value;
 
     // 3. change the page to /store/whatever-they-entered
@@ -20,13 +20,7 @@ class StorePicker extends React.Component {
       <form className="store-selector" onSubmit={this.goToStore}>
         <h2>Please Enter A Store</h2>
 
-        <input
-          defaultValue={getFunName()}
-          placeholder="Store Name"
-          ref={this.myInput}
-          required
-          type="text"
-        />
+        <input defaultValue={getFunName()} placeholder="Store Name" ref={this.myInput} required type="text" />
 
         <button type="submit">Visit Store =></button>
       </form>
